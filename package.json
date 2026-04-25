@@ -1,0 +1,19 @@
+{
+  "name": "apple-ripeness-detector",
+  "version": "1.0.0",
+  "description": "Web application for detecting apple ripeness using Roboflow AI",
+  "main": "server.py",
+  "scripts": {
+    "dev": "python server.py"
+  },
+  "keywords": [
+    "apple",
+    "ripeness",
+    "detection",
+    "roboflow",
+    "machine-learning",
+    "ai"
+  ],
+  "author": "Liyang",
+  "license": "ISC"
+}

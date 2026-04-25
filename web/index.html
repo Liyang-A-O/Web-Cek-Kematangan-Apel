@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deteksi Kematangan Apel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <h1>🍎 Deteksi Kematangan Apel</h1>
+        <p>Upload gambar apel untuk mendeteksi tingkat kematangannya</p>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+        <!-- Upload Area -->
+        <div id="uploadArea" class="upload-area">
+            <p>📤</p>
+            <p>Klik atau drag gambar ke sini</p>
+            <small>PNG, JPG atau JPEG (Max. 10MB)</small>
+            <input type="file" id="fileInput" accept="image/*" hidden>
+        </div>
+
+        <!-- Kamera -->
+        <button id="cameraBtn" class="btn primary">📷 Ambil Foto</button>
+        <input type="file" id="cameraInput" accept="image/*" capture="environment" hidden>
+
+        <!-- Preview -->
+        <div id="previewSection" class="preview-section" style="display:none;">
+            <p class="preview-label">Preview</p>
+            <img id="previewImage" alt=" ">
+            <div class="button-group" id="buttonGroup" style="display:none;">
+                <button id="detectBtn" class="btn success">🔍 Deteksi</button>
+                <button id="resetBtn" class="btn danger">↻ Reset</button>
+            </div>
+        </div>
+
+        <!-- Loading -->
+        <div id="loadingSection" class="loading" style="display:none;">
+            <p>⏳ Sedang menganalisis...</p>
+        </div>
+
+        <!-- Results -->
+        <div id="resultsSection" class="results" style="display:none;">
+            <h3>📊 Hasil Analisis</h3>
+            <div id="resultsContainer"></div>
+            <div class="button-group results-button-group">
+                <button id="backHomeBtn" class="btn primary">Kembali</button>
+            </div>
+        </div>
+
+        <!-- Error -->
+        <div id="errorSection" class="error" style="display:none;">
+            <p id="errorText"></p>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        Menggunakan Roboflow AI Model untuk deteksi kematangan apel<br>
+        <small>v1.0 · Built with Flask & Roboflow</small>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
